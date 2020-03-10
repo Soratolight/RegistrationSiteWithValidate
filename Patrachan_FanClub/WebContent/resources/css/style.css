@@ -1,0 +1,204 @@
+/*@charset"utf-8";*/
+
+body {
+	font: 16px/1.6 "Hiragino kaku Gothic Pro",Osaka,"メイリオ";
+	margin: 0;
+	height: 100%;
+	background: #fff;
+	color: #555;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
+nav{
+    width: 100%;    /*横幅の指定*/
+    border-top: 2px solid black;   /*上部の線の色を指定*/
+    border-bottom: 2px solid black;    /*下部の線の色を指定*/
+    margin-bottom: 5px;
+    overflow: hidden;
+    background-image: url("../Banner/navbar3.PNG");
+    z-index: 65535;
+}
+
+nav ul{
+    width: 60%; /*横幅の指定*/
+    margin-left: 20%;   /*左端から20%右側に動かす*/
+    margin-right: 20%;
+}
+
+nav li{
+    width: calc(20% - 2px); /*横幅の指定（線の分をマイナスする）*/
+    border-left: 1px solid black;  /*線を描く*/
+    text-align: center; /*文字を中央に*/
+    float: left;    /*左から並べる*/
+    list-style: none; /*liの点をなくす*/
+}
+
+nav li:last-child{
+    border-right: 1px solid black; /*li要素の最後の物は右側に線を描く*/
+}
+
+nav a{
+    display: block; /*1つのli全体にリンクを有効にする*/
+    text-decoration: none;  /*ブラウザ標準のリンク装飾をオフに*/
+    color:white;  /*文字色の変更*/
+    font-size: 110%;    /*フォントサイズの指定*/
+    letter-spacing: 2px;    /*文字と文字の間隔をあける*/
+    font-weight: 400;   /*文字の太さを調整*/
+    line-height: 45px;  /*行間の指定（ナビボタンの高さ指定）*/
+    cursor: pointer;
+}
+
+nav a:hover{
+    background-color: red;   /*背景色の指定*/
+    color: #fff;    /*文字色の変更*/
+    transition: 1s;   /*ホバー時の動きをなめらかにする*/
+}
+
+footer {
+	width: 100%;
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-image: url(img/black.jpg);
+	border-top: 2px solid red;   /*上部の線の色を指定*/
+    border-bottom: 2px solid red;    /*下部の線の色を指定*/
+    margin-top: 100px;
+}
+
+footer address{
+	color: #fff;
+	letter-spacing: 1px;
+}
+
+.wrapper {
+    position: relative;
+}
+
+.nav_on {
+    position: fixed;
+    top: 0px;
+}
+
+.section_wrap {
+    max-width: 100%;
+    padding-top: 47px;
+    margin: 0 auto;
+}
+
+.section {
+    padding-top: 60px;
+    max-width: 80%;
+    margin: 0 auto;
+    /*padding-bottom: 60px;*/
+}
+
+.section_title {
+    font-size: 24px;
+    color: #666;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.section_flex {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: space-between;
+    vertical-align: center;
+}
+
+.flexbox {
+    width: 49%;
+    display: flex;
+    align-items: center;
+    padding-right: 10px;
+    padding-left: 40px;
+    /*margin: 0 auto;*/
+    /*vertical-align: center;*/
+    /*position: relative;*/
+}
+
+.flexbox img {
+    display: block;
+    max-width: 100%;
+    /*text-align: center;*/
+    /*position: absolute;*/
+    /*top:50%;*/
+    /*transform: translateY(-50%);*/
+}
+
+.section-divider {
+  z-index: 999;
+  width: 100%;
+  display: table;
+  max-height: 50px;
+  border-top: 2px solid red;   /*上部の線の色を指定*/
+  border-bottom: 2px solid red;    /*下部の線の色を指定*/
+  padding-top: 30px;
+  padding-bottom: 50px;
+  margin-top: 45px;
+  background-position: center center;
+  -webkit-background-size: 100%;
+  -moz-background-size: 100%;
+  -o-background-size: 100%;
+  background-size: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-attachment: relative;
+  text-align: center;
+}
+
+.divider1 {
+  background-image: url("../Banner/ptrchan_banner.jpg");
+}
+
+.btn {
+  font-size: 14px;
+  text-decoration: none;
+  color:#fff;
+  padding:10px 10px 10px 10px;
+  background-color: #2562cc;
+  -moz-transition: box-shadow 0.5s text-shadow 0.5s;
+  -o-transition: box-shadow 0.5s text-shadow 0.5s;
+  -webkit-transition: box-shadow 0.5s text-shadow 0.5s;
+  transition: box-shadow 0.5s text-shadow 0.5s;
+  cursor: pointer;
+  margin-top: 5px;
+  display : flex;
+  justify-content: center;
+}
+
+.btn:hover {
+  text-shadow: 0px 0px 10px #fff;
+  box-shadow: 0px 0px 50px skyblue;
+}
+
+.btn2 {
+  font-size: 14px;
+  text-decoration: none;
+  color:#fff;
+  padding:10px 60px 10px 60px;
+  background-color: red;
+  -moz-transition: box-shadow 0.5s text-shadow 0.5s;
+  -o-transition: box-shadow 0.5s text-shadow 0.5s;
+  -webkit-transition: box-shadow 0.5s text-shadow 0.5s;
+  transition: box-shadow 0.5s text-shadow 0.5s;
+  cursor: pointer;
+  margin-top: 5px;
+  display : flex;
+  justify-content: center;
+}
+
+.btn2:hover {
+  text-shadow: 0px 0px 10px #fff;
+  box-shadow: 0px 0px 20px tomato;
+}
+/*
+@media screen and (max-width:768px) {
+    nav ul{
+    width: 100%; /*横幅の指定*/
+    /*margin-left: 20%;   /*左端から20%右側に動かす*/
