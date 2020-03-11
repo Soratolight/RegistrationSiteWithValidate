@@ -199,6 +199,13 @@
 						<option value="31">31日</option>
 					</select>
 				</div>
+				<div class="p-2 flex-fill">
+					<select class="custom-select" name="gender" required>
+						<option value="">性別</option>
+						<option value="男">男</option>
+						<option value="女">女</option>
+					</select>
+				</div>
 			</div>
 			<!-- 郵便番号 -->
 			<label for="zipcode">郵便番号</label>
