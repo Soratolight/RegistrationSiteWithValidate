@@ -12,7 +12,7 @@ public class SignUpDAO {
 	//データベースへアクセスするための情報
 	private final String DRIVER_NAME = "com.mysql.jdbc.Driver";//MySQLドライバ
 	private final String DB_URL = "jdbc:mysql://localhost:3306/";//DBサーバー名
-	private final String DB_NAME = "employee_db";//データベース名
+	private final String DB_NAME = "patrachan_fanclub_db";//データベース名
 	private final String DB_ENCODE = "?useUnicode=true&characterEncoding=utf8";//文字化け防止
 	private final String JDBC_URL = DB_URL + DB_NAME + DB_ENCODE;//接続DBとURL
 	private final String DB_USER = "root";//ユーザーID

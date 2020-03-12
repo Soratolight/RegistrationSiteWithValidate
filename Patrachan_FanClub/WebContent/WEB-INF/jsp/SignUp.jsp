@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%
+	String errorMsg = (String) request.getAttribute("errorMsg");
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -210,30 +213,30 @@
 			<!-- 郵便番号 -->
 			<label for="zipcode">郵便番号</label>
 			<div class="input-group">
-				<input type="text" class="form-control" placeholder="002-8282"
+				<input type="text" class="form-control" placeholder="0028282"
 					aria-label="" aria-describedby="basic-addon1" id="zipcode"
 					name="zipcode" required>
 				<div class="input-group-append">
-					<button class="btn btn-success" type="button">郵便番号から住所を自動入力</button>
+					<button class="btn btn-success" type="button" id="zipConvert" name="zipConvert">郵便番号から住所を自動入力</button>
 				</div>
 			</div>
 			<br>
 			<!-- 住所 -->
 			<div class="form-group">
 				<label for="streetAddress">住所</label> <input type="text"
-					class="form-control" id="streetAddress" placeholder="大阪府大阪市浪速区"
+					class="form-control" id="streetAddress" placeholder="東京都北区赤羽"
 					name="streetAddress" required>
 			</div>
 			<!-- 住所２ -->
 			<div class="form-group">
 				<label for="streetAddress2">住所２</label> <input type="text"
-					class="form-control" id="streetAddress" placeholder="〇〇マンション101号室"
+					class="form-control" id="streetAddress" placeholder="喫茶店ハニーストラップ"
 					name="streetAddress2" required>
 			</div>
 			<!-- 電話番号 -->
 			<div class="form-group">
 				<label for="phoneNumber">電話番号</label> <input type="text"
-					class="form-control" id="phoneNumber" placeholder="090-1234-5678"
+					class="form-control" id="phoneNumber" placeholder="09012345678"
 					name="phoneNumber" required>
 			</div>
 			<!-- メールアドレス -->
@@ -245,7 +248,7 @@
 			<!-- userID -->
 			<div class="form-group">
 				<label for="userId">ユーザーID</label> <input type="text"
-					class="form-control" id="userId" placeholder="SuouPatraGachiKoiZei"
+					class="form-control" id="userId" placeholder="PatraChan"
 					name="userId" required>
 			</div>
 			<!-- password -->
@@ -267,6 +270,27 @@
 			<button type="submit" class="btn btn-primary mb-2">登録</button>
 			<!-- flexwrap -->
 		</form>
+		<!-- error msg -->
+		<%
+			if (errorMsg != null) {
+		%>
+		<div class="message-window">
+			<div class="message-area">
+				<div class="content">
+					<div class="arrow-white"></div>
+					<div class="arrow-black"></div>
+					<div class="background-white"></div>
+					<div class="background-black"></div>
+					<div class="text-area">
+						<div><%=errorMsg%></div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<%
+			}
+		%>
 		<!-- コンテナ -->
 	</div>
 
