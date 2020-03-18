@@ -13,7 +13,7 @@ public class AccountDTO implements Serializable {
 	private int zipcode; //郵便番号
 	private String streetAddress; //住所
 	private String streetAddress2; //住所2
-	private int phoneNumber; //電話番号
+	private String phoneNumber; //電話番号
 	private String userId; //ユーザID
 	private String password; //パスワード
 	private String mailAddress; //メールアドレス
@@ -22,7 +22,7 @@ public class AccountDTO implements Serializable {
 	}
 
 	public AccountDTO(String sei, String mei, int dob_year, int dob_month, int dob_date, String gender, int zipcode,
-			String streetAddress, String streetAddress2, int phoneNumber,
+			String streetAddress, String streetAddress2, String phoneNumber,
 			String userId,
 			String password, String mailAddress) {
 		this.sei = sei;
@@ -112,11 +112,11 @@ public class AccountDTO implements Serializable {
 		this.streetAddress2 = streetAddress2;
 	}
 
-	public int getPhoneNumber() {
+	public String getPhoneNumber() {
 		return phoneNumber;
 	}
 
-	public void setPhoneNumber(int phoneNumber) {
+	public void setPhoneNumber(String phoneNumber) {
 		this.phoneNumber = phoneNumber;
 	}
 

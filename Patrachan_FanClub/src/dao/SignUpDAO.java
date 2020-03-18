@@ -28,7 +28,7 @@ public class SignUpDAO {
 			Connection connection = DriverManager.getConnection(JDBC_URL, DB_USER, DB_PASS);
 
 			//sqlを初期化しておく
-			String sql = "INSERT INTO fan_info(sei, mei, dob_year, dob_month, dob_date, gender, zipcode, streetAddress, streetAddress2, phoneNumber, userId, password, mailAddress) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+			String sql = "INSERT INTO FanInfo(sei, mei, dob_year, dob_month, dob_date, gender, zipcode, streetAddress, streetAddress2, phoneNumber, userId, password, mailAddress) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
 			//sql文の?の部分に値を代入
 			PreparedStatement pstmt = connection.prepareStatement(sql);
@@ -41,7 +41,7 @@ public class SignUpDAO {
 			pstmt.setInt(7, account.getZipcode());
 			pstmt.setString(8, account.getStreetAddress());
 			pstmt.setString(9, account.getStreetAddress2());
-			pstmt.setInt(10, account.getPhoneNumber());
+			pstmt.setString(10, account.getPhoneNumber());
 			pstmt.setString(11, account.getUserId());
 			pstmt.setString(12, account.getPassword());
 			pstmt.setString(13, account.getMailAddress());

@@ -33,7 +33,7 @@ public class SignUp extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		//入力された郵便番号で住所を自動入力
-		if(request.getParameter("zipConvert"))
+		//if(request.getParameter("zipConvert"))
 
 		//リクエストパラメータで入力された値を取得
 		request.setCharacterEncoding("UTF-8");
@@ -47,7 +47,7 @@ public class SignUp extends HttpServlet {
 		String zipcodeString = request.getParameter("zipcode");
 		String streetAddress = request.getParameter("streetAddress");
 		String streetAddress2 = request.getParameter("streetAddress2");
-		String phoneNumberString = request.getParameter("phoneNumber");
+		String phoneNumber = request.getParameter("phoneNumber");
 		String userId = request.getParameter("userId");
 		String password = request.getParameter("password");
 		String checkPassword = request.getParameter("checkPassword");
@@ -58,7 +58,6 @@ public class SignUp extends HttpServlet {
 		Integer dob_month = Integer.parseInt(dob_monthString);
 		Integer dob_date = Integer.parseInt(dob_dateString);
 		Integer zipcode = Integer.parseInt(zipcodeString);
-		Integer phoneNumber = Integer.parseInt(phoneNumberString);
 
 		//変数に格納した値をAccount型のaccountに代入
 		AccountDTO account = new AccountDTO(sei, mei, dob_year, dob_month, dob_date, gender, zipcode, streetAddress,
@@ -91,7 +90,7 @@ public class SignUp extends HttpServlet {
 			request.setAttribute("errorMsg", "住所が入力されていないか、条件を満たしていません");
 			RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/SignUp.jsp");
 			dispatcher.forward(request, response);
-		} else if (phoneNumber == null || phoneNumber > 0) {
+		} else if (phoneNumber == null || phoneNumber.length() > 11) {
 			request.setAttribute("errorMsg", "電話番号が入力されていないか、条件を満たしていません");
 			RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/SignUp.jsp");
 			dispatcher.forward(request, response);
