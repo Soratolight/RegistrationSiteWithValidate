@@ -1,2 +1,2 @@
 # Jsp_Servlet_w-_json
-jsonとAPIを使って遊んでみよう
+javaを使用し会員(ファン)登録サイトを制作しました。
