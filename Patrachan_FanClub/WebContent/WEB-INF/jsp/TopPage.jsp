@@ -42,10 +42,10 @@
 		<nav class="nav_on">
 			<ul>
 				<li><a href="#">Home</a></li>
-				<li><a href="#about">Photo</a></li>
-				<li><a href="#hobby">Signin</a></li>
+				<li><a href="#about">XXX</a></li>
+				<li><a href="#hobby">XXX</a></li>
 				<li><a href="/Patrachan_FanClub/SignUp">SignUp</a></li>
-				<li><a href="#contact">Contact</a></li>
+				<li><a href="#contact">XXX</a></li>
 			</ul>
 		</nav>
 
